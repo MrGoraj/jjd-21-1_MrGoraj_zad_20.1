@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 public class UserRepository {
 
-    private List<User> userList = new ArrayList<>();
+    private final List<User> userList = new ArrayList<>();
 
     public List<User> getAll() {
         return userList;
