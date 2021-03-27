@@ -17,7 +17,9 @@ public class UserController {
     }
 
     @RequestMapping("/add")
-    public String hello(@RequestParam(name = "imie") String firstName, @RequestParam(name = "nazwisko", required = false) String lastName, @RequestParam(name = "wiek", required = false) Integer age) {
+    public String hello(@RequestParam(name = "imie") String firstName,
+                        @RequestParam(name = "nazwisko", required = false) String lastName,
+                        @RequestParam(name = "wiek", required = false) Integer age) {
         User user = new User(firstName, lastName, age);
         if (firstName.equals("")) {
             return "redirect:/err.html";
